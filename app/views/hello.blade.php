@@ -19,7 +19,7 @@
 
       {{ Form::open(array('url'=>'/signup'))}}
        
-       {{Form::submit('signup_here')}}
+       {{Form::submit('signup_here ')}}
 
       {{ Form::close()}}
 
