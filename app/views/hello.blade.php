@@ -21,6 +21,8 @@
        
        {{Form::submit('signup_here')}}
 
+       {{HTML::link('/','same_page')}}
+
       {{ Form::close()}}
 
   </body>
