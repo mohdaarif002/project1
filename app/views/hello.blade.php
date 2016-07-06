@@ -24,5 +24,7 @@
 
       {{ Form::close()}}
 
+      <p>All this is for testing purpose</p>
+
   </body>
 </html>
