@@ -19,11 +19,14 @@
 
       {{ Form::open(array('url'=>'/signup'))}}
        
-       {{Form::submit('signup_here')}}
+       {{Form::submit('signup_here ')}}
+       {{HTML::link('/','same_page')}}
 
        {{HTML::link('/','same_page')}}
 
       {{ Form::close()}}
+
+      <p>All this is for testing purpose</p>
 
   </body>
 </html>
