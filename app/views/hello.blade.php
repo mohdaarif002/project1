@@ -19,9 +19,11 @@
 
       {{ Form::open(array('url'=>'/signup'))}}
        
-       {{Form::submit('signup')}}
+       {{Form::submit('sign_up')}}
 
       {{ Form::close()}}
+
+<p>here the given addition is done by shiv rai okkkkk </p>
 
   </body>
 </html>
