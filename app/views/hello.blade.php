@@ -1,16 +1,17 @@
+
+{{-- skipmin --}}
 <!doctype html>
 <html>
   <body>
     
-  
+  <h2>Welcome to drone website</h2>
 
+      {{Form::open(array('url'=>'/login_check','method'=>'POST')) }}
 
-      {{Form::open(array('url'=>'/login_check')) }}
+      {{Form::label('login_usr','Usr_name: ')}} {{Form::text('login_usr')}}           <br>
+      {{Form::label('login_pass','Password: ')}} {{Form::password('login_pass')}}     <br>
 
-      {{Form::label('login_usr','User_name: ')}} {{Form::text('login_usr')}}           <br>
-      {{Form::label('login_pass','password: ')}} {{Form::password('login_pass')}}  <br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       {{ Form::submit()}}
 
       {{ Form::close() }}
@@ -20,13 +21,15 @@
       {{ Form::open(array('url'=>'/signup'))}}
        
        {{Form::submit('signup_here ')}}
-       {{HTML::link('/','same_page')}}
+       <br><br>
+       {{HTML::link('/','Refresh')}}
+       <br><br>
 
-       {{HTML::link('/','same_page')}}
+       {{HTML::link('about_us','ABOUT US')}}
 
       {{ Form::close()}}
 
-      <p>All this is for testing purpose</p>
+ 
 
   </body>
 </html>

@@ -42,8 +42,11 @@ if(empty($_POST['form_usr'])  ||   empty($_POST['form_pass']) )
     }
 else{
 
+
+
  $hash_pass=Hash::make($pass); 
-DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$hash_pass) );
+ date_default_timezone_set("Asia/Calcutta");
+DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$hash_pass,'date'=> date("Y:m:d  h:i:sa")) );
 
 
     echo 'login_successful';
@@ -86,16 +89,21 @@ else{
 
 Session::put('key',$user);
 $table_row=DB::table('temp')->where('table_username',$user)->first();
+if($table_row){
 $table_pass=$table_row->table_password;
 //$Re_hash=Hash::needsRehash($table_pass);
 
 
 
-if($user==$table_row->table_username and Hash::check($pass,$table_pass))
-     return View::make('login_successful')->withName($user);
+if($user==$table_row->table_username and Hash::check($pass,$table_pass)){
+     return View::make('login_successful')->withName($user);}
+   else {echo "Permission denied!!";
+     return View::make('hello');}
+    
+ }
 else
-    {echo 'Permission denied!!';
-  return View::make('hello');}
+    {echo "Permission denied!!";
+     return View::make('hello');}
    
   
   }
@@ -125,5 +133,11 @@ return View::make('showData');
 
 return View::make('all_user');
 
+
+ });
+
+ Route::get('about_us',function(){
+
+ return View::make('about_us');
 
  });
