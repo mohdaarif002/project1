@@ -42,7 +42,7 @@
       {{ Form::close()}}
       
        {{HTML::link('bootstrap_page','bootstrap_magic')}}
-       {{HTML::link('compressPage','compress_images')}}
+       {{HTML::link('compressKrde','compress_images')}}
 
  
    </div>

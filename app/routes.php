@@ -11,6 +11,14 @@
 |
 */
 
+
+Route::get('/pass',function(){
+
+return View::make('pass');
+
+});
+
+
 Route::get('/',function(){
 
 return View::make('hello');
@@ -139,5 +147,20 @@ return View::make('all_user');
  Route::get('about_us',function(){
 
  return View::make('about_us');
+
+ });
+ 
+ Route::get('bootstrap_page',function(){
+     
+     
+     
+   return View::make('bootstrap_page');
+ });
+
+ Route::get('compressPage',function(){
+
+
+return View::make('compressPage');
+
 
  });

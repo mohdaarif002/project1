@@ -1,13 +1,4 @@
-<html>
-
-  <head>
-  	<link rel="stylesheet" type="text/css" href="{{ url() }}/css/style.css"/>
-  </head>
- <body>
-
- 	<div class="showdata">
-
-<?php
+<html> <head> <link rel="stylesheet" type="text/css" href="<?php echo url(); ?>/css/style.css"/> </head> <body> <div class="showdata"><?php
 
 $data=DB::table('temp')->where('table_username',Session::get('key'))->first();
 
@@ -17,12 +8,4 @@ echo'<b>'; print_r($data->id);echo'</b>';
 
 
 ?>
-
-
-
-
-
-
-    </div>
-  </body>
- </html> 
+ </div> </body> </html> 

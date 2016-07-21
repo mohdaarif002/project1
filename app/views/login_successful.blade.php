@@ -1,13 +1,21 @@
 <html>
+    <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <meta name="viewport" content="width=device-width, initial-scale=1">    
+          <link href="bootstrap/css/style.css" rel="stylesheet">
+    	
+    </head>
   <body>
-  	  <center>
+ 
+  	<div class="mainsection">
+  	  
+ 
 
-<?php
-echo'WElcome to your account '.$name;
+WElcome to your account {{ $name }}
 
 
 
-?>
 
 <br><br>
 
@@ -23,7 +31,10 @@ echo'WElcome to your account '.$name;
 
 {{HTML::link('all_user','SHOW ALL USER')}}
 
-   </center>
+
+  
+
+  </div>
  </body>
 </html>
   
