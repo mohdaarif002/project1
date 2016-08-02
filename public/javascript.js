@@ -5,14 +5,10 @@ function saybuddy(){
 
 var name="atul";//local
 
-
-alert('This is alert message!!');
-
-
-
+alert('Welcome to Drone World!!');
 
 }
 
 
-document.write('hye this script is working!! '+name);
+document.write('Scripting is implemented here');
 saybuddy();

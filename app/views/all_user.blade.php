@@ -6,10 +6,7 @@
             <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
             <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
-            <link href="bootstrap/css/style.css" rel="stylesheet">
-
-            <script src="javascript.js">
-            </script>    
+            <link href="bootstrap/css/style.css" rel="stylesheet">   
     </head>
     
   <body>
@@ -18,8 +15,8 @@
       <?php
         $data=DB::table('temp')->get();   ?>
 
-        
-      <table class="table table-bordered">
+    <div class="table-responsive">    
+      <table class="table table-striped">
 	   <tr><th>Name</th>  <th>Password</th> <th>ID</th></tr>
         @foreach($data as $person)
          
@@ -33,8 +30,8 @@
         @endforeach
 
 
-</table>
+      </table>
+    </div>
 
-
-  	</body>
+  </body>
  </html> 		

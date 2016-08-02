@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the Closure to execute when that URI is requested.
-|
-*/
 
 
 Route::get('/pass',function(){
@@ -50,16 +40,14 @@ if(empty($_POST['form_usr'])  ||   empty($_POST['form_pass']) )
     }
 else{
 
-
-
  $hash_pass=Hash::make($pass); 
  date_default_timezone_set("Asia/Calcutta");
-DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$hash_pass,'date'=> date("Y:m:d  h:i:sa")) );
+ DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$hash_pass,'date'=> date("Y:m:d  h:i:sa")) );
 
 
-    echo 'login_successful';
+echo 'login_successful';
 
-    return View::make('hello');
+return View::make('hello');
 
 }
 
@@ -73,9 +61,6 @@ DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$ha
 });
 
 
-
-
-
  Route::get('signup', function()
 { 
     return View::make('signup');
@@ -86,7 +71,7 @@ DB::table('temp')->insert(array('table_username' => $user,'table_password' =>$ha
 
  Route::post('/login_check', function()
 { 
-   $user=$_POST['login_usr'];
+$user=$_POST['login_usr'];
 $pass=$_POST['login_pass'];
 
 if(empty($_POST['login_usr'])  ||   empty($_POST['login_pass']) )
@@ -118,14 +103,10 @@ else
 
 });
 
- Route::post('/redirect',function(){
+ Route::post('/redirect','HomeController@logOut');
+     
+   
 
-return View::make('hello');
-
-
-
-
- });
 
 
 
@@ -133,14 +114,12 @@ return View::make('hello');
 
 return View::make('showData');
 
-
  });
 
 
  Route::get('/all_user',function(){
 
 return View::make('all_user');
-
 
  });
 
@@ -151,14 +130,11 @@ return View::make('all_user');
  });
  
  Route::get('bootstrap_page',function(){
-     
-     
-     
+       
    return View::make('bootstrap_page');
  });
 
  Route::get('compressPage',function(){
-
 
 return View::make('compressPage');
 

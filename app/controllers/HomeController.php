@@ -15,10 +15,11 @@ class HomeController extends BaseController {
 		
 	}
         
-        public function getCategories()
+        public function logOut()
         {
-
-            return 11;
-           //return View::make('addCategory',array('categoryList'=>$categories));
-         } 
+         
+            
+            return Redirect::to('/')->with('msg','T');
+            
+        }
 }

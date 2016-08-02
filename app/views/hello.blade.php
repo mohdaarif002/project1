@@ -10,11 +10,21 @@
             <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
             <link href="bootstrap/css/style.css" rel="stylesheet">
 
-            <script src="javascript.js">
-            </script>    
     </head>
 
   <body>
+     
+      @if( Session::get('msg')=='T')
+       <script>
+            alert('Thanks For Visiting here!!');
+            </script>
+      @else
+          <script>
+            alert('Welcome to Drone World!!');
+            </script>
+       @endif     
+      
+      
    <div class="mainsection">  
     
   <h2>Welcome to drone website</h2>
@@ -45,8 +55,6 @@
        {{HTML::link('bootstrap_page','bootstrap_magic')}}
         <br><br>
        {{HTML::link('compressPage','compress_images')}}
-          <br><br>
-       {{HTML::link('javaScript','AlertButton')}}
 
  
    </div>
