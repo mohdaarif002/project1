@@ -10,7 +10,8 @@
             <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
             <link href="bootstrap/css/style.css" rel="stylesheet">
 
-      
+            <script src="javascript.js">
+            </script>    
     </head>
 
   <body>
@@ -42,7 +43,10 @@
       {{ Form::close()}}
       
        {{HTML::link('bootstrap_page','bootstrap_magic')}}
+        <br><br>
        {{HTML::link('compressPage','compress_images')}}
+          <br><br>
+       {{HTML::link('javaScript','AlertButton')}}
 
  
    </div>
